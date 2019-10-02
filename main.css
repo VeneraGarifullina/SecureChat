@@ -1,0 +1,26 @@
+body {
+    font-family: tahoma;
+    color:#282828;
+    margin: 0px;
+  }
+.name {
+    text-align: center;
+    font-family: inherit;
+    font-size: 3em;
+    margin-top: 50px;
+    
+}
+img {
+    margin: 0 auto;
+}
+.nav-bar {
+    background: linear-gradient(-90deg, #868FBF, #FFBFFE);
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+.sign-up {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 400px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="main.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <meta charset="utf-8">
+        <title>Приветики</title>
+    </head>
+    <body>
+        <div id ="app">
+            <div class="nav-bar"></div>
+            <h1 class="name">Достаточно красиво?</h1>
+            <h2 style="text-align: center;">{{name}}</h2>
+            <center>
+                <img src="img/1.png">
+            </center>
+
+            <div class="sign-up">
+                <div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input v-model="login" name="login" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input v-model="password" name="password" class="form-control"  placeholder="Password">
+                    </div>
+                    <button v-if= "access"
+                            @click ="enterAction" 
+                            class="btn btn-primary">Войти</button>
+                    <button v-else
+                            @click ="loginAction" 
+                            class="btn btn-primary">Готово</button>
+                    <p v-if = "access"> {{enter}} <span @click ="actSignUp()">Регистрация</span></p>
+                    <p v-else> {{enter}} <span @click ="actSignIn()">Войти</span></p>
+                    <p>{{message}}</p>
+
+                </div>
+            </div>
+        </div>
+        
+        
+<!--    
+        <div class="nav-bar">
+        </div>
+        <div id="app">
+            <product :premium="premium"></product>
+        </div>
+-->
+    <script src="https://cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script> 
+    <script src="vue.js"></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        
+    </body>
+</html>
